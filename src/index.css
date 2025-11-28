@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@layer base {
+  body {
+    @apply bg-[#fffaf7] text-gray-800 font-[Poppins] overflow-x-hidden;
+  }
+}
+
+@layer components {
+  a, button, input {
+    @apply transition-all duration-200;
+  }
+}
+
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5px); }
+}
+
+@keyframes pulse-slow {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 1.8s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@keyframes flyShake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(2px); }
+  75% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+.fly-shake {
+  animation: flyShake 0.45s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+
+
+/* ============================
+   Premium Animations
+=============================== */
+
+@keyframes flyShake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(2px); }
+  75% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+.fly-shake {
+  animation: flyShake 0.45s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease forwards;
+}
