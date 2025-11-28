@@ -67,17 +67,18 @@ const ProductDetails: React.FC = () => {
     setTimeout(() => setAdded(false), 1200);
   };
 
-  // Buy Now
-        const handleBuyNow = () => {
-          const message = `Hello, I want to buy:
-        Product: ${product.name}
-        Price: ₹${product.price}
-        Product ID: ${product.id}
-        Please confirm availability.`;
+const handleBuyNow = () => {
+  const phone = "+918341661503"; // IMPORTANT: + added here
 
-          const encodedMessage = encodeURIComponent(message);
-          window.open(`https://wa.me/91XXXXXXXXXX?text=${encodedMessage}`, "_blank");
-        };
+  const msg =
+    "Hello, I want to buy:\n" +
+    "Product: " + product.name + "\n" +
+    "Price: ₹" + product.price + "\n" +
+    "Product ID: " + product.id + "\n" +
+    "Please confirm availability.";
+
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, "_blank");
+};
 
 
   return (
