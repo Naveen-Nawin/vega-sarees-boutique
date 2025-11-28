@@ -68,11 +68,17 @@ const ProductDetails: React.FC = () => {
   };
 
   // Buy Now
-  const handleBuyNow = () => {
-    const phone = "918341661503";
-    const msg = `Hello, I want to buy:\nProduct: ${product.name}\nPrice: ₹${product.price}\nProduct ID: ${product.id}`;
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
-  };
+        const handleBuyNow = () => {
+          const message = `Hello, I want to buy:
+        Product: ${product.name}
+        Price: ₹${product.price}
+        Product ID: ${product.id}
+        Please confirm availability.`;
+
+          const encodedMessage = encodeURIComponent(message);
+          window.open(`https://wa.me/91XXXXXXXXXX?text=${encodedMessage}`, "_blank");
+        };
+
 
   return (
     <>
